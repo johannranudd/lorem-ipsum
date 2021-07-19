@@ -1,27 +1,93 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    --ff-primary: "Roboto", sans-serif;
-    --ff-secondary: "Open Sans", sans-serif;
-    --clr-grey-10: hsl(210, 36%, 96%);
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  --clr-primary-5: #49a6e9;
 }
 
 body {
-    font-family: var(--ff-secondary);
-    background: var(--clr-grey-10);
-    color: var(--clr-grey-1);
-    line-height: 1.5;
-    font-size: 0.875rem;
+  font-family: var(--ff-secondary);
+  background: var(--clr-grey-10);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 1rem;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
+
+
+.section-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    margin: 12% auto;
+    max-width: 1200px;
+}
+
+.section-center h3 {
+    font-size: 2rem;
+    text-transform: capitalize;
+    margin-bottom: .75rem;
+}
+
+.lorem-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.lorem-form label{
+    font-size: 1.2rem;
+}
+.lorem-form input{
+    width: 3rem;
+    height: 1.8rem;
+    padding: 0 0.5rem;
+    margin: 0 .6rem;
+    font-size: 1rem;
+}
+.lorem-form button {
+    height: 1.8rem;
+    width: 5rem;
+    padding: .2rem 1rem;
+    margin-left: 1rem;
+    background: var(--clr-primary-5);
+    color: var(--ff-secondary);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.lorem-form button:hover {
+    opacity: .8;
+}
+
+.lorem-text {
+    width: 80%;
+    max-width: 600px;
+}
+
+.result {
+    margin: 20px 0;
+}
+
+.lorem-form input[type=radio] {
+    margin: 0 .3rem;
+    width: 1.4rem;
+}
+
