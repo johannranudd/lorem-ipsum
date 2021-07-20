@@ -68,13 +68,49 @@ const radio = document.querySelectorAll("input[type=radio]");
 
 
 
+
+// !works
+// form.addEventListener("submit", function (submit) {
+//   submit.preventDefault();
+//   // input value
+//   const amountValue = parseInt(amount.value);
+
+//   // if not a number, < 0 || > 9
+//   function chooseList(list) {
+//     if (isNaN(amountValue) || amountValue < 0 || amountValue > list.length) {
+//         const randomNumber = Math.floor(Math.random() * list.length);
+//         loremText.innerHTML = `<p class="result">${list[randomNumber]}</p>`;
+//         return loremText;
+//       } else {
+//         // return paragraph
+//         let tempText = list.slice(0, amountValue);
+//         tempText = tempText
+//           .map(function (paragraph) {
+//             return `<p class="result">${paragraph}</p>`;
+//           })
+//           .join("");
+//         loremText.innerHTML = tempText;
+//       }
+//   }
+//     if (hipster.checked) {
+//         chooseList(text)
+//     }
+//     else if (eminem.checked) {
+//         chooseList(loreminem)
+//     }
+    
+// });
+// !end works
+
 form.addEventListener("submit", function (submit) {
   submit.preventDefault();
   // input value
   const amountValue = parseInt(amount.value);
+  const authors = [text, loreminem];
+  // console.log(authors);
+ 
   // if not a number, < 0 || > 9
   function chooseList(list) {
-    //   *works
     if (isNaN(amountValue) || amountValue < 0 || amountValue > list.length) {
         const randomNumber = Math.floor(Math.random() * list.length);
         loremText.innerHTML = `<p class="result">${list[randomNumber]}</p>`;
@@ -89,19 +125,14 @@ form.addEventListener("submit", function (submit) {
           .join("");
         loremText.innerHTML = tempText;
       }
-    //   *end works
   }
-//   chooseList(text);
-    // if (hipster.checked) {
-    //     chooseList(text)
-    // }
-    // else if (eminem.checked) {
-    //     chooseList(loreminem)
-    // }
-    radio.forEach(function(e) {
-        // if (e.checked.value) {
-        //     console.log(e.value);
-        // }
-        console.log(text);
+    if (hipster.checked) {
+        chooseList(text)
+    }
+    else if (eminem.checked) {
+        chooseList(loreminem)
+    }
+    const mapAuthors = authors.map(function(e) {
+      console.log(e[0]);
     })
 });
