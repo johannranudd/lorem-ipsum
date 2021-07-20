@@ -58,6 +58,12 @@ const loreminem = [
     `And I am whatever you say I am. If I wasn't, then why would I say I am?. In the paper, the news, every day I am. Radio won't even play my jam. ‘Cause I am whatever you say I am. If I wasn't, then why would I say I am?. In the paper, the news, every day I am. I don't know, it's just the way I am.`,
 ];
 
+const p = [
+  `distinctio corrupti natus inventore molestias?`,
+  `consequuntur magnam odio quasi ipsa delectus`,
+  `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugiat neque vitae, maiores a tempora aliquam nobis velit aperiam`,
+]
+
 const form = document.querySelector(".lorem-form");
 const btn = document.querySelector(".btn");
 const amount = document.querySelector("#amount");
@@ -70,45 +76,11 @@ const radio = document.querySelectorAll("input[type=radio]");
 
 
 // !works
-// form.addEventListener("submit", function (submit) {
-//   submit.preventDefault();
-//   // input value
-//   const amountValue = parseInt(amount.value);
-
-//   // if not a number, < 0 || > 9
-//   function chooseList(list) {
-//     if (isNaN(amountValue) || amountValue < 0 || amountValue > list.length) {
-//         const randomNumber = Math.floor(Math.random() * list.length);
-//         loremText.innerHTML = `<p class="result">${list[randomNumber]}</p>`;
-//         return loremText;
-//       } else {
-//         // return paragraph
-//         let tempText = list.slice(0, amountValue);
-//         tempText = tempText
-//           .map(function (paragraph) {
-//             return `<p class="result">${paragraph}</p>`;
-//           })
-//           .join("");
-//         loremText.innerHTML = tempText;
-//       }
-//   }
-//     if (hipster.checked) {
-//         chooseList(text)
-//     }
-//     else if (eminem.checked) {
-//         chooseList(loreminem)
-//     }
-    
-// });
-// !end works
-
 form.addEventListener("submit", function (submit) {
   submit.preventDefault();
   // input value
   const amountValue = parseInt(amount.value);
-  const authors = [text, loreminem];
-  // console.log(authors);
- 
+
   // if not a number, < 0 || > 9
   function chooseList(list) {
     if (isNaN(amountValue) || amountValue < 0 || amountValue > list.length) {
@@ -132,7 +104,7 @@ form.addEventListener("submit", function (submit) {
     else if (eminem.checked) {
         chooseList(loreminem)
     }
-    const mapAuthors = authors.map(function(e) {
-      console.log(e[0]);
-    })
+    
 });
+// !end works
+
